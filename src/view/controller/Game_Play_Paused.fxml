@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.Game_Play_Paused">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="627.0" fitWidth="573.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image_source/Pause_Screen_bg.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="100.0" layoutY="139.0" prefHeight="416.0" prefWidth="217.0">
+               <children>
+                  <Button fx:id="resume" mnemonicParsing="false" onAction="#resume" prefHeight="114.0" prefWidth="218.0" text="Resume">
+                     <font>
+                        <Font name="System Bold Italic" size="32.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#main_menu" prefHeight="114.0" prefWidth="218.0" text="Main Menu">
+                     <font>
+                        <Font name="System Bold Italic" size="32.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Logout" prefHeight="114.0" prefWidth="218.0" text="Log out">
+                     <font>
+                        <Font name="System Bold Italic" size="32.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#force_Exit" prefHeight="114.0" prefWidth="218.0" text="Exit">
+                     <font>
+                        <Font name="System Bold Italic" size="32.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -18,7 +18,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-
+        Variable_Reading.getInstance().initializing();
         stg = primaryStage;
         Image icon = new Image(getClass().getResourceAsStream("/image_source/game_logo.png"));
         primaryStage.setResizable(false);

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="600" maxWidth="800" minHeight="600" minWidth="800" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.menu">
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="835.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image_source/background.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="238.0" layoutY="57.0" text="Game Menu" textFill="#4100ff">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="60.0" />
+               </font>
+            </Label>
+            <Button layoutX="700.0" mnemonicParsing="false" onAction="#logout" prefHeight="50.0" prefWidth="49.0" text="Button">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="@../../image_source/logout_logo_50.png" />
+                     </source>
+                  </ImageInput>
+               </effect>
+            </Button>
+            <Button layoutX="750.0" mnemonicParsing="false" onAction="#force_Exit" prefHeight="50.0" prefWidth="49.0" text="Button">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="@../../image_source/logo-exit_50.png" />
+                     </source>
+                  </ImageInput>
+               </effect>
+            </Button>
+            <VBox layoutX="299.0" layoutY="137.0" prefHeight="455.0" prefWidth="206.0">
+               <children>
+                  <Button blendMode="COLOR_BURN" mnemonicParsing="false" onAction="#start" prefHeight="91.0" prefWidth="222.0" text="START" textFill="RED">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="36.0" />
+                     </font>
+                  </Button>
+                  <Button blendMode="COLOR_BURN" mnemonicParsing="false" onAction="#setting" prefHeight="91.0" prefWidth="222.0" text="Setting" textFill="#c92222">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="36.0" />
+                     </font>
+                  </Button>
+                  <Button blendMode="COLOR_BURN" mnemonicParsing="false" onAction="#about_us" prefHeight="91.0" prefWidth="222.0" text="About Us" textFill="#1c2f59">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="36.0" />
+                     </font>
+                  </Button>
+                  <Button blendMode="COLOR_BURN" mnemonicParsing="false" onAction="#contact_us" prefHeight="91.0" prefWidth="222.0" text="Contact Us" textFill="#ff1f1f">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="32.0" />
+                     </font>
+                  </Button>
+                  <Button blendMode="COLOR_BURN" mnemonicParsing="false" onAction="#advanced_mood" prefHeight="91.0" prefWidth="222.0" text="Advanced Mood">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
