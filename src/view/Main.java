@@ -20,7 +20,7 @@ public class Main extends Application {
         stg = primaryStage;
         Image icon = new Image(getClass().getResourceAsStream("/image_source/game_logo.png"));
         primaryStage.setResizable(false);
-        Parent root = FXMLLoader.load(getClass().getResource("fxml/enter.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("controller/enter.fxml"));
         primaryStage.setTitle("Farm Frenzy");
         primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.getIcons().add(icon);
@@ -38,7 +38,7 @@ public class Main extends Application {
         launch(args);
     }
 
-    public void exit(Stage stage) throws IOException {
+    public void force_Exit(){
         Alert aLert = new Alert(Alert.AlertType.NONE);
         aLert.setTitle("Exit");
         aLert.setHeaderText("You're about to exit the program");

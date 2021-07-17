@@ -11,31 +11,31 @@ public class menu {
 
     Main main = new Main();
 
-    public void start(){
-
+    public void start() throws IOException {
+        main.changeScene("controller/levels.fxml");
     }
 
-    public void setting(){
-
+    public void setting() throws IOException {
+        main.changeScene("controller/setting.fxml");
     }
 
-    public void about_us(){
-
+    public void about_us() throws IOException {
+        main.changeScene("controller/about_us.fxml");
     }
 
-    public void contact_us(){
-
+    public void contact_us() throws IOException {
+        main.changeScene("controller/contact_us.fxml");
     }
 
-    public void advanced_mood(){
-
+    public void advanced_mood() throws IOException {
+        main.changeScene("controller/advanced_mood.fxml");
     }
 
-    public void logout(){
-
+    public void logout() throws IOException {
+        main.changeScene("controller/enter.fxml");
     }
 
-    public void exit(Stage stage) throws IOException {
+    public void force_Exit(){
         Alert aLert = new Alert(Alert.AlertType.NONE);
         aLert.setTitle("Exit");
         aLert.setHeaderText("You're about to exit the program");

@@ -24,7 +24,7 @@
                   <Font name="Berlin Sans FB Demi Bold" size="60.0" />
                </font>
             </Label>
-            <Button layoutX="700.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="49.0" text="Button">
+            <Button layoutX="700.0" mnemonicParsing="false" onAction="#logout" prefHeight="50.0" prefWidth="49.0" text="Button">
                <effect>
                   <ImageInput>
                      <source>
@@ -33,7 +33,7 @@
                   </ImageInput>
                </effect>
             </Button>
-            <Button layoutX="750.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="49.0" text="Button">
+            <Button layoutX="750.0" mnemonicParsing="false" onAction="#force_Exit" prefHeight="50.0" prefWidth="49.0" text="Button">
                <effect>
                   <ImageInput>
                      <source>
@@ -44,27 +44,27 @@
             </Button>
             <VBox layoutX="299.0" layoutY="137.0" prefHeight="455.0" prefWidth="206.0">
                <children>
-                  <Button blendMode="COLOR_BURN" mnemonicParsing="false" prefHeight="91.0" prefWidth="222.0" text="START" textFill="RED">
+                  <Button blendMode="COLOR_BURN" mnemonicParsing="false" onAction="#start" prefHeight="91.0" prefWidth="222.0" text="START" textFill="RED">
                      <font>
                         <Font name="Berlin Sans FB Demi Bold" size="36.0" />
                      </font>
                   </Button>
-                  <Button blendMode="COLOR_BURN" mnemonicParsing="false" prefHeight="91.0" prefWidth="222.0" text="Setting" textFill="#c92222">
+                  <Button blendMode="COLOR_BURN" mnemonicParsing="false" onAction="#setting" prefHeight="91.0" prefWidth="222.0" text="Setting" textFill="#c92222">
                      <font>
                         <Font name="Berlin Sans FB Demi Bold" size="36.0" />
                      </font>
                   </Button>
-                  <Button blendMode="COLOR_BURN" mnemonicParsing="false" prefHeight="91.0" prefWidth="222.0" text="About Us" textFill="#1c2f59">
+                  <Button blendMode="COLOR_BURN" mnemonicParsing="false" onAction="#about_us" prefHeight="91.0" prefWidth="222.0" text="About Us" textFill="#1c2f59">
                      <font>
                         <Font name="Berlin Sans FB Demi Bold" size="36.0" />
                      </font>
                   </Button>
-                  <Button blendMode="COLOR_BURN" mnemonicParsing="false" prefHeight="91.0" prefWidth="222.0" text="Contact Us" textFill="#ff1f1f">
+                  <Button blendMode="COLOR_BURN" mnemonicParsing="false" onAction="#contact_us" prefHeight="91.0" prefWidth="222.0" text="Contact Us" textFill="#ff1f1f">
                      <font>
                         <Font name="Berlin Sans FB Demi Bold" size="32.0" />
                      </font>
                   </Button>
-                  <Button blendMode="COLOR_BURN" mnemonicParsing="false" prefHeight="91.0" prefWidth="222.0" text="Advanced Mood">
+                  <Button blendMode="COLOR_BURN" mnemonicParsing="false" onAction="#advanced_mood" prefHeight="91.0" prefWidth="222.0" text="Advanced Mood">
                      <font>
                         <Font name="Berlin Sans FB Demi Bold" size="24.0" />
                      </font>

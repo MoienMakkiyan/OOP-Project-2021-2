@@ -25,7 +25,7 @@
                   <Font name="Arial Rounded MT Bold" size="36.0" />
                </font>
             </Label>
-            <TextField fx:id="username" layoutX="362.0" layoutY="238.0" prefHeight="78.0" prefWidth="280.0">
+            <TextField fx:id="textField" layoutX="362.0" layoutY="238.0" prefHeight="78.0" prefWidth="280.0">
                <font>
                   <Font size="36.0" />
                </font>
@@ -35,29 +35,29 @@
                   <Font name="Arial Rounded MT Bold" size="36.0" />
                </font>
             </Label>
-            <PasswordField fx:id="password" layoutX="362.0" layoutY="342.0" prefHeight="78.0" prefWidth="280.0">
+            <PasswordField fx:id="passwordField" layoutX="362.0" layoutY="342.0" prefHeight="78.0" prefWidth="280.0">
                <font>
                   <Font size="36.0" />
                </font>
             </PasswordField>
-            <Label alignment="CENTER" layoutX="1.0" layoutY="143.0" prefHeight="47.0" prefWidth="800.0" textFill="#ff0096">
+            <Label fx:id="error_box" alignment="CENTER" layoutX="1.0" layoutY="143.0" prefHeight="47.0" prefWidth="800.0" textFill="#ff0096">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
             <HBox layoutX="188.0" layoutY="474.0" prefHeight="62.0" prefWidth="433.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="150.0" text="Log in">
+                  <Button mnemonicParsing="false" onAction="#Login" prefHeight="62.0" prefWidth="150.0" text="Log in">
                      <font>
                         <Font name="Berlin Sans FB Demi Bold" size="32.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="154.0" text="Sign up">
+                  <Button mnemonicParsing="false" onAction="#Signup" prefHeight="62.0" prefWidth="154.0" text="Sign up">
                      <font>
                         <Font name="Berlin Sans FB Demi Bold" size="32.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="144.0" text="Exit">
+                  <Button mnemonicParsing="false" onAction="#force_Exit" prefHeight="62.0" prefWidth="144.0" text="Exit">
                      <font>
                         <Font name="Berlin Sans FB Demi Bold" size="32.0" />
                      </font>

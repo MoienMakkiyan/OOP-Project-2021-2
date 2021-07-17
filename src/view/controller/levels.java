@@ -50,7 +50,11 @@ public class levels {
 
     }
 
-    public void exit(Stage stage) throws IOException {
+    public void main_menu(){
+
+    }
+
+    public void force_Exit(){
         Alert aLert = new Alert(Alert.AlertType.NONE);
         aLert.setTitle("Exit");
         aLert.setHeaderText("You're about to exit the program");
