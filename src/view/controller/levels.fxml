@@ -100,7 +100,7 @@
                   </ImageInput>
                </effect>
             </Button>
-            <Label fx:id="error_box" alignment="CENTER" layoutY="493.0" prefHeight="58.0" prefWidth="800.0" textFill="RED">
+            <Label fx:id="error_box" alignment="CENTER" layoutY="493.0" prefHeight="58.0" prefWidth="800.0" text="Choose Your Level" textFill="RED">
                <font>
                   <Font name="System Bold Italic" size="40.0" />
                </font>

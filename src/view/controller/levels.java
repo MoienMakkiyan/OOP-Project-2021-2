@@ -1,5 +1,6 @@
 package view.controller;
 
+import basecode.Functions.Main_Manager;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -26,32 +27,76 @@ public class levels {
     @FXML
     private Button button5;
 
-    public void level1(){
-
+    public void initialize(){
+        if (!check_level(1)){
+            button1.setDisable(true);
+        }
+        else {
+            button1.setDisable(false);
+        }
+        if (!check_level(2)){
+            button2.setDisable(true);
+        }
+        else {
+            button2.setDisable(false);
+        }
+        if (!check_level(3)){
+            button3.setDisable(true);
+        }
+        else {
+            button3.setDisable(false);
+        }
+        if (!check_level(4)){
+            button4.setDisable(true);
+        }
+        else {
+            button4.setDisable(false);
+        }
+        if (!check_level(5)){
+            button5.setDisable(true);
+        }
+        else {
+            button5.setDisable(false);
+        }
     }
 
-    public void level2(){
-
+    public boolean check_level(int n){
+        if (Main_Manager.getInstance().getCURRENT_USER().getLevel()>=n)
+            return true;
+        else return false;
     }
 
-    public void level3(){
-
+    public void level1() throws IOException {
+        Main_Manager.getInstance().setCurrent_level(1);
+        main.changeScene("controller/Game_Play.fxml");
     }
 
-    public void level4(){
-
+    public void level2() throws IOException {
+        Main_Manager.getInstance().setCurrent_level(2);
+        main.changeScene("controller/Game_Play.fxml");
     }
 
-    public void level5(){
-
+    public void level3() throws IOException {
+        Main_Manager.getInstance().setCurrent_level(3);
+        main.changeScene("controller/Game_Play.fxml");
     }
 
-    public void logout(){
-
+    public void level4() throws IOException {
+        Main_Manager.getInstance().setCurrent_level(4);
+        main.changeScene("controller/Game_Play.fxml");
     }
 
-    public void main_menu(){
+    public void level5() throws IOException {
+        Main_Manager.getInstance().setCurrent_level(5);
+        main.changeScene("controller/Game_Play.fxml");
+    }
 
+    public void logout() throws IOException {
+        main.changeScene("controller/enter.fxml");
+    }
+
+    public void main_menu() throws IOException {
+        main.changeScene("controller/menu.fxml");
     }
 
     public void force_Exit(){

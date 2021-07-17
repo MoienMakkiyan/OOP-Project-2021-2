@@ -1,5 +1,6 @@
 package view;
 
+import basecode.Functions.Variable_Reading;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,6 +18,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
+
         stg = primaryStage;
         Image icon = new Image(getClass().getResourceAsStream("/image_source/game_logo.png"));
         primaryStage.setResizable(false);
