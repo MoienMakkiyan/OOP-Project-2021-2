@@ -3,10 +3,13 @@ package view.controller;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
+import view.Main;
 
 import java.io.IOException;
 
 public class menu {
+
+    Main main = new Main();
 
     public void start(){
 

@@ -1,19 +1,29 @@
 package view.controller;
 
+import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import view.Main;
 
 import java.io.IOException;
 
 public class levels {
+    Main main = new Main();
+
+    @FXML
     private Label error_box;
+    @FXML
     private Button button1;
+    @FXML
     private Button button2;
+    @FXML
     private Button button3;
+    @FXML
     private Button button4;
+    @FXML
     private Button button5;
 
     public void level1(){

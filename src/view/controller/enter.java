@@ -1,13 +1,20 @@
 package view.controller;
 
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import view.Main;
 
 import java.io.IOException;
 
 public class enter {
+    Main main = new Main();
+
+    @FXML
     private Label error_box;
+    @FXML
     private TextField textField;
+    @FXML
     private PasswordField passwordField;
 
     public void Login(){

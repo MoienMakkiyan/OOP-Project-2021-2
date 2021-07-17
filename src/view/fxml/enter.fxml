@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="600" maxWidth="800" minHeight="600" minWidth="800" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.enter">
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
@@ -41,7 +40,7 @@
                   <Font size="36.0" />
                </font>
             </PasswordField>
-            <Label fx:id="error_box" alignment="CENTER" layoutX="1.0" layoutY="143.0" prefHeight="47.0" prefWidth="800.0" textFill="#ff0096">
+            <Label alignment="CENTER" layoutX="1.0" layoutY="143.0" prefHeight="47.0" prefWidth="800.0" textFill="#ff0096">
                <font>
                   <Font size="32.0" />
                </font>

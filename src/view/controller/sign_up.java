@@ -1,14 +1,22 @@
 package view.controller;
 
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import view.Main;
 
 import java.io.IOException;
 
 public class sign_up {
+    Main main = new Main();
+
+    @FXML
     private Label accept_user;
+    @FXML
     private Label accept_password;
+    @FXML
     private TextField textField;
+    @FXML
     private PasswordField passwordField;
 
     public void Login(){
