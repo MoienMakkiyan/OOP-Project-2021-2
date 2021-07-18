@@ -120,7 +120,6 @@ public class Game_Play {
         Main_Manager.getInstance().print();
         base_map.getChildren().clear();
         Add_images();
-        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
     }
 
     public void Add_images(){
@@ -129,7 +128,7 @@ public class Game_Play {
             for (int j = 0 ; j < Variable_Reading.getInstance().getMap_size()[1] ; j++){
                 if (Main_Manager.getInstance().getCell()[i][j].hasGrass()){
                     for (int k = 0 ; k < Main_Manager.getInstance().getCell()[i][j].getHasGrass() ; k++){
-                        image(i+1,j+1,"grass",false);
+                        image(i+1,j+1,"grass","grass");
                     }
                 }
             }
@@ -137,146 +136,152 @@ public class Game_Play {
         //Add bear
         for (Bear bear : Main_Manager.getInstance().getBears()){
             if (bear.isActivation()){
-                image(bear.getX(),bear.getY(),"bear",false);
+                image(bear.getX(),bear.getY(),"bear","wild");
             }
             else {
-                image(bear.getX(),bear.getY(),"bear",true);
+                image(bear.getX(),bear.getY(),"bear","wild");
                 if (bear.getCage_counter() == 1){
-                    image(bear.getX(),bear.getY(),"cage1",true);
+                    image(bear.getX(),bear.getY(),"cage1","wild");
                 } else if (bear.getCage_counter() == 2){
-                    image(bear.getX(),bear.getY(),"cage2",true);
+                    image(bear.getX(),bear.getY(),"cage2","wild");
                 } else if (bear.getCage_counter() == 3){
-                    image(bear.getX(),bear.getY(),"cage3",true);
+                    image(bear.getX(),bear.getY(),"cage3","wild");
                 } else if (bear.getCage_counter() == 4){
-                    image(bear.getX(),bear.getY(),"cage4",true);
+                    image(bear.getX(),bear.getY(),"cage4","wild");
                 }
             }
         }
         //Add Buffalo
         for (Buffalo buffalo : Main_Manager.getInstance().getBuffalos()){
-            image(buffalo.getX(),buffalo.getY(),"Buffalo",false);
+            image(buffalo.getX(),buffalo.getY(),"Buffalo","animal");
         }
         //Add Chicken
         for (Chicken chicken : Main_Manager.getInstance().getChickens()){
-            image(chicken.getX(),chicken.getY(),"chicken",false);
+            image(chicken.getX(),chicken.getY(),"chicken","animal");
         }
         //Add CollectorCat
         for (CollectorCat collectorCat : Main_Manager.getInstance().getCollectorCats()){
-            image(collectorCat.getX(),collectorCat.getY(),"cat",false);
+            image(collectorCat.getX(),collectorCat.getY(),"cat","animal");
         }
         //Add HunterDog
         for (HunterDog hunterDog : Main_Manager.getInstance().getHunterDogs()){
-            image(hunterDog.getX(),hunterDog.getY(),"dog",false);
+            image(hunterDog.getX(),hunterDog.getY(),"dog","animal");
         }
         //Add Lion
         for (Lion lion : Main_Manager.getInstance().getLions()){
             if (lion.isActivation()){
-                image(lion.getX(),lion.getY(),"lion",false);
+                image(lion.getX(),lion.getY(),"lion","wild");
             }
             else {
-                image(lion.getX(),lion.getY(),"lion",true);
+                image(lion.getX(),lion.getY(),"lion","wild");
                 if (lion.getCage_counter() == 1){
-                    image(lion.getX(),lion.getY(),"cage1",true);
+                    image(lion.getX(),lion.getY(),"cage1","wild");
                 } else if (lion.getCage_counter() == 2){
-                    image(lion.getX(),lion.getY(),"cage2",true);
+                    image(lion.getX(),lion.getY(),"cage2","wild");
                 } else if (lion.getCage_counter() == 3){
-                    image(lion.getX(),lion.getY(),"cage3",true);
+                    image(lion.getX(),lion.getY(),"cage3","wild");
                 } else if (lion.getCage_counter() == 4){
-                    image(lion.getX(),lion.getY(),"cage4",true);
+                    image(lion.getX(),lion.getY(),"cage4","wild");
                 }
             }
         }
         //Add Ostrich
         for (Ostrich ostrich : Main_Manager.getInstance().getOstriches()){
-            image(ostrich.getX(),ostrich.getY(),"ostrich",false);
+            image(ostrich.getX(),ostrich.getY(),"ostrich","animal");
         }
         //Add tiger
         for (Tiger tiger : Main_Manager.getInstance().getTigers()){
             if (tiger.isActivation()){
-                image(tiger.getX(),tiger.getY(),"tiger",false);
+                image(tiger.getX(),tiger.getY(),"tiger","wild");
             }
             else {
-                image(tiger.getX(),tiger.getY(),"tiger",true);
+                image(tiger.getX(),tiger.getY(),"tiger","wild");
                 if (tiger.getCage_counter() == 1){
-                    image(tiger.getX(),tiger.getY(),"cage1",true);
+                    image(tiger.getX(),tiger.getY(),"cage1","wild");
                 } else if (tiger.getCage_counter() == 2){
-                    image(tiger.getX(),tiger.getY(),"cage2",true);
+                    image(tiger.getX(),tiger.getY(),"cage2","wild");
                 } else if (tiger.getCage_counter() == 3){
-                    image(tiger.getX(),tiger.getY(),"cage3",true);
+                    image(tiger.getX(),tiger.getY(),"cage3","wild");
                 } else if (tiger.getCage_counter() == 4){
-                    image(tiger.getX(),tiger.getY(),"cage4",true);
+                    image(tiger.getX(),tiger.getY(),"cage4","wild");
                 }
             }
         }
         //Add bread
         for (Bread bread : Main_Manager.getInstance().getBreads()){
             if (bread.isInMap()){
-                image(bread.getX(),bread.getY(),"BREAD",false);
+                image(bread.getX(),bread.getY(),"BREAD","product");
             }
         }
         //Add BuffaloMilk
         for (BuffaloMilk buffaloMilk : Main_Manager.getInstance().getBuffaloMilks()){
             if (buffaloMilk.isInMap()){
-                image(buffaloMilk.getX(),buffaloMilk.getY(),"MILK",false);
+                image(buffaloMilk.getX(),buffaloMilk.getY(),"MILK","product");
             }
         }
         //Add Egg
         for (Egg egg : Main_Manager.getInstance().getEggs()){
             if (egg.isInMap()){
-                image(egg.getX(),egg.getY(),"EGG",false);
+                image(egg.getX(),egg.getY(),"EGG","product");
             }
         }
         //Add Flour
         for (Flour flour : Main_Manager.getInstance().getFlours()){
             if (flour.isInMap()){
-                image(flour.getX(),flour.getY(),"FLOUR",false);
+                image(flour.getX(),flour.getY(),"FLOUR","product");
             }
         }
         //Add Icecream
         for (Icecream icecream : Main_Manager.getInstance().getIcecreams()){
             if (icecream.isInMap()){
-                image(icecream.getX(),icecream.getY(),"ICE_CREAM",false);
+                image(icecream.getX(),icecream.getY(),"ICE_CREAM","product");
             }
         }
         //Add PocketMilk
         for (PocketMilk pocketMilk : Main_Manager.getInstance().getPocketMilks()){
             if (pocketMilk.isInMap()){
-                image(pocketMilk.getX(),pocketMilk.getY(),"PACKET_MILK",false);
+                image(pocketMilk.getX(),pocketMilk.getY(),"PACKET_MILK","product");
             }
         }
         //Add Shirt
         for (Shirt shirt : Main_Manager.getInstance().getShirts()){
             if (shirt.isInMap()){
-                image(shirt.getX(),shirt.getY(),"SHIRT",false);
+                image(shirt.getX(),shirt.getY(),"SHIRT","product");
             }
         }
         //Add Textile
         for (Textile textile : Main_Manager.getInstance().getTextiles()){
             if (textile.isInMap()){
-                image(textile.getX(),textile.getY(),"FABRIC",false);
+                image(textile.getX(),textile.getY(),"FABRIC","product");
             }
         }
         //Add TurkeyFeather
         for (TurkeyFeather turkeyFeather : Main_Manager.getInstance().getTurkeyFeathers()){
             if (turkeyFeather.isInMap()){
-                image(turkeyFeather.getX(),turkeyFeather.getY(),"FEATHER",false);
+                image(turkeyFeather.getX(),turkeyFeather.getY(),"FEATHER","product");
             }
         }
     }
 
-    public void image(int x, int y, String name, boolean wild){
+    public void image(int x, int y, String name, String type){
         ImageView image = new ImageView(new Image("@../../image_source/"+name+".png"));//TODO
         X_Y x_y_view = back_scaleXY(x,y);
         image.setLayoutX(x_y_view.getX());
         image.setLayoutY(x_y_view.getY());
         image.setFitWidth(WIDTH/Variable_Reading.getInstance().getMap_size()[0]);
         image.setFitHeight(HEIGHT/Variable_Reading.getInstance().getMap_size()[1]);
-        if (wild){
+        if (type.equalsIgnoreCase("wild")){
             image.setOnMouseClicked(event -> {
                 GAME_ORDERS.getInstance().Cage(x,y,Main_Manager.getInstance().getCURRENT_USER());
             });
         }
         base_map.getChildren().add(image);
+        if (type.equalsIgnoreCase("product")){
+            if (GAME_ORDERS.getInstance().Pickup(x,y,Main_Manager.getInstance().getCURRENT_USER())){
+                System.out.println("&&&&&");
+                base_map.getChildren().remove(image);
+            }
+        }
     }
 
     public void buy_bakery_click(){
@@ -408,6 +413,17 @@ public class Game_Play {
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle("Pause");
         Pane root = FXMLLoader.load(getClass().getResource("Game_Play_Paused.fxml"));
+        Image icon = new Image(getClass().getResourceAsStream("/image_source/game_logo.png"));
+        window.setScene(new Scene(root, 400 , 600));
+        window.getIcons().add(icon);
+        window.showAndWait();
+    }
+
+    public void task_left() throws IOException {
+        Stage window = new Stage();
+        window.initModality(Modality.APPLICATION_MODAL);
+        window.setTitle("Tasks");
+        Pane root = FXMLLoader.load(getClass().getResource("task_left.fxml"));
         Image icon = new Image(getClass().getResourceAsStream("/image_source/game_logo.png"));
         window.setScene(new Scene(root, 400 , 600));
         window.getIcons().add(icon);

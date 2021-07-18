@@ -5,6 +5,7 @@ import basecode.Objects.Animal.*;
 import basecode.Objects.Products.*;
 import basecode.Objects.WorkShops.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -240,6 +241,7 @@ public class Main_Manager {
         }
         else if (name.equalsIgnoreCase("Chicken")) {
             chickens.add(new Chicken(Variable_Reading.getInstance().getEgg_time()));
+            System.out.println(Variable_Reading.getInstance().getEgg_time());
         }
         else if (name.equalsIgnoreCase("CollectorCat")) {
             collectorCats.add(new CollectorCat());
@@ -506,87 +508,93 @@ public class Main_Manager {
     }
 
     public boolean add_to_warehouse(int x, int y) {
-        String product = cell[x][y].takeProduct();
-        if (!product.equals("")) {
-            warehouse.Add(product, Variable_Reading.getInstance().item_capacity(product));
-            if (product.equalsIgnoreCase("Bread")){
-                for (Bread bread : breads){
-                    if (bread.getX() == x+1 && bread.getY() == y+1) {
-                        bread.setInMap(false);
-                        bread.setInWerehouse(true);
+        boolean a = false;
+        ArrayList<String> products = cell[x][y].getProducts();
+        for (String product : products){
+            if (!product.equals("")) {
+                warehouse.Add(product, Variable_Reading.getInstance().item_capacity(product));
+                if (product.equalsIgnoreCase("Bread")){
+                    for (Bread bread : breads){
+                        if (bread.getX() == x+1 && bread.getY() == y+1) {
+                            bread.setInMap(false);
+                            bread.setInWerehouse(true);
+                        }
                     }
                 }
-            }
-            else if (product.equalsIgnoreCase("BuffaloMilk")){
-                for (BuffaloMilk buffaloMilk : buffaloMilks){
-                    if (buffaloMilk.getX() == x+1 && buffaloMilk.getY() == y+1) {
-                        buffaloMilk.setInMap(false);
-                        buffaloMilk.setInWerehouse(true);
+                else if (product.equalsIgnoreCase("BuffaloMilk")){
+                    for (BuffaloMilk buffaloMilk : buffaloMilks){
+                        if (buffaloMilk.getX() == x+1 && buffaloMilk.getY() == y+1) {
+                            buffaloMilk.setInMap(false);
+                            buffaloMilk.setInWerehouse(true);
+                        }
                     }
                 }
-            }
-            else if (product.equalsIgnoreCase("Egg")){
-                for (Egg egg : eggs){
-                    if (egg.getX() == x+1 && egg.getY() == y+1) {
-                        egg.setInMap(false);
-                        egg.setInWerehouse(true);
+                else if (product.equalsIgnoreCase("Egg")){
+                    System.out.println("11");
+                    for (Egg egg : eggs){
+                        if (egg.getX() == x+1 && egg.getY() == y+1) {
+                            System.out.println("22");
+                            egg.setInMap(false);
+                            egg.setInWerehouse(true);
+                        }
                     }
                 }
-            }
-            else if (product.equalsIgnoreCase("Flour")){
-                for (Flour flour : flours){
-                    if (flour.getX() == x+1 && flour.getY() == y+1) {
-                        flour.setInMap(false);
-                        flour.setInWerehouse(true);
+                else if (product.equalsIgnoreCase("Flour")){
+                    for (Flour flour : flours){
+                        if (flour.getX() == x+1 && flour.getY() == y+1) {
+                            flour.setInMap(false);
+                            flour.setInWerehouse(true);
+                        }
                     }
                 }
-            }
-            else if (product.equalsIgnoreCase("Icecream")){
-                for (Icecream icecream : icecreams){
-                    if (icecream.getX() == x+1 && icecream.getY() == y+1) {
-                        icecream.setInMap(false);
-                        icecream.setInWerehouse(true);
+                else if (product.equalsIgnoreCase("Icecream")){
+                    for (Icecream icecream : icecreams){
+                        if (icecream.getX() == x+1 && icecream.getY() == y+1) {
+                            icecream.setInMap(false);
+                            icecream.setInWerehouse(true);
+                        }
                     }
                 }
-            }
-            else if (product.equalsIgnoreCase("PocketMilk")){
-                for (PocketMilk pocketMilk : pocketMilks){
-                    if (pocketMilk.getX() == x+1 && pocketMilk.getY() == y+1) {
-                        pocketMilk.setInMap(false);
-                        pocketMilk.setInWerehouse(true);
+                else if (product.equalsIgnoreCase("PocketMilk")){
+                    for (PocketMilk pocketMilk : pocketMilks){
+                        if (pocketMilk.getX() == x+1 && pocketMilk.getY() == y+1) {
+                            pocketMilk.setInMap(false);
+                            pocketMilk.setInWerehouse(true);
+                        }
                     }
                 }
-            }
-            else if (product.equalsIgnoreCase("Shirt")){
-                for (Shirt shirt : shirts){
-                    if (shirt.getX() == x+1 && shirt.getY() == y+1) {
-                        shirt.setInMap(false);
-                        shirt.setInWerehouse(true);
+                else if (product.equalsIgnoreCase("Shirt")){
+                    for (Shirt shirt : shirts){
+                        if (shirt.getX() == x+1 && shirt.getY() == y+1) {
+                            shirt.setInMap(false);
+                            shirt.setInWerehouse(true);
+                        }
                     }
                 }
-            }
-            else if (product.equalsIgnoreCase("Textile")){
-                for (Textile textile : textiles){
-                    if (textile.getX() == x+1 && textile.getY() == y+1) {
-                        textile.setInMap(false);
-                        textile.setInWerehouse(true);
+                else if (product.equalsIgnoreCase("Textile")){
+                    for (Textile textile : textiles){
+                        if (textile.getX() == x+1 && textile.getY() == y+1) {
+                            textile.setInMap(false);
+                            textile.setInWerehouse(true);
+                        }
                     }
                 }
-            }
-            else if (product.equalsIgnoreCase("TurkeyFeather")){
-                for (TurkeyFeather turkeyFeather : turkeyFeathers){
-                    if (turkeyFeather.getX() == x+1 && turkeyFeather.getY() == y+1) {
-                        turkeyFeather.setInMap(false);
-                        turkeyFeather.setInWerehouse(true);
+                else if (product.equalsIgnoreCase("TurkeyFeather")){
+                    for (TurkeyFeather turkeyFeather : turkeyFeathers){
+                        if (turkeyFeather.getX() == x+1 && turkeyFeather.getY() == y+1) {
+                            turkeyFeather.setInMap(false);
+                            turkeyFeather.setInWerehouse(true);
+                        }
                     }
                 }
+                //TODO
+                a = true;
+            } else {
+                //TODO there wasn't a product there
+                a = false;
             }
-            //TODO
-            return true;
-        } else {
-            //TODO there wasn't a product there
-            return false;
         }
+        return a;
     }
 
     public boolean Cage(int x, int y) {
@@ -803,7 +811,7 @@ public class Main_Manager {
     private void Add_Primary_Products(int x, int y, String animal) {
         if (animal.equalsIgnoreCase("chicken")) {
             eggs.add(new Egg(x, y));
-            cell[x - 1][y - 1].AddProduct("egg", eggs.size()-1);
+            cell[x - 1][y - 1].AddProduct("Egg", eggs.size()-1);
             egg_n++;
         } else if (animal.equalsIgnoreCase("Buffalo")) {
             buffaloMilks.add(new BuffaloMilk(x, y));
@@ -1062,6 +1070,7 @@ public class Main_Manager {
                 chicken.time_pass();
                 if (chicken.time_to_produce()){
                     Add_Primary_Products(chicken.getX(),chicken.getY(),"chicken");
+                    System.out.println("@!@!@!@!@");
                 }
                 if (chicken.isHungry()&&cell[chicken.getX()-1][chicken.getY()-1].hasGrass()){
                     cell[chicken.getX()-1][chicken.getY()-1].eatGrass();
@@ -1415,17 +1424,17 @@ public class Main_Manager {
         if (name.equalsIgnoreCase("bear")){
             Bear bear = new Bear();
             bears.add(bear);
-            cell[bear.getX()-1][bear.getY()].AddAnimal("bear");
+            cell[bear.getX()-1][bear.getY()-1].AddAnimal("bear");
         }
         else if (name.equalsIgnoreCase("tiger")){
             Tiger tiger = new Tiger();
             tigers.add(tiger);
-            cell[tiger.getX()-1][tiger.getY()].AddAnimal("tiger");
+            cell[tiger.getX()-1][tiger.getY()-1].AddAnimal("tiger");
         }
         else if (name.equalsIgnoreCase("lion")){
             Lion lion = new Lion();
             lions.add(lion);
-            cell[lion.getX()-1][lion.getY()].AddAnimal("lion");
+            cell[lion.getX()-1][lion.getY()-1].AddAnimal("lion");
         }
     }
 
@@ -2429,5 +2438,28 @@ public class Main_Manager {
 
     public void setCurrent_level(int current_level) {
         this.current_level = current_level;
+    }
+
+    public void newUser (String username){
+        File folder = new File("UserData\\"+username);
+        folder.mkdir();
+        File user_data = new File("UserData\\"+username+"\\user_data.txt");
+        File map_data = new File("UserData\\"+username+"\\map_data.txt");
+        File product_data = new File("UserData\\"+username+"\\product_data.txt");
+        File animal_data = new File("UserData\\"+username+"\\animal_data.txt");
+        File log = new File("UserData\\"+username+"\\LOGGER.log");
+        File ETC = new File("UserData\\"+username+"\\ETC_data.txt");
+        File Missions = new File("UserData\\"+username+"\\missions_data.txt");
+        try {
+            user_data.createNewFile();
+            map_data.createNewFile();
+            product_data.createNewFile();
+            animal_data.createNewFile();
+            log.createNewFile();
+            ETC.createNewFile();
+            Missions.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -188,6 +188,7 @@ public class GAME_ORDERS {
         }
         else {
             //TODO
+            System.out.println("FuckJava");
             return false;
         }
     }

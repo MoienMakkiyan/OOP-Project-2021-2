@@ -23,6 +23,9 @@ public class Chicken extends Animal {
 
     public boolean time_to_produce(){
         CURRENT_TIME++;
+        System.out.println(CURRENT_TIME);
+        System.out.println(MAX_TIME);
+        System.out.println("@!@!###$$$%%%^^&&&**");
         if (CURRENT_TIME == MAX_TIME){
             CURRENT_TIME = 0;
             return true;

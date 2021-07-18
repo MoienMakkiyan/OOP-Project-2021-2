@@ -39,7 +39,7 @@ public class Cell {
     }
 
     public void AddProduct (String name,int index){
-        name+=String.valueOf(index);
+        //name+=String.valueOf(index);
         products.add(name);
     }
 

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.task_left">
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image_source/backgroundMenu.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="38.0" layoutY="98.0" prefHeight="474.0" prefWidth="150.0">
+               <children>
+                  <ImageView fitHeight="78.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image_source/lable.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="78.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image_source/lable.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="78.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image_source/lable.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="78.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image_source/lable.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="78.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image_source/lable.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="78.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image_source/lable.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox layoutX="208.0" layoutY="100.0" prefHeight="472.0" prefWidth="150.0">
+               <children>
+                  <ImageView fitHeight="78.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image_source/lable.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="78.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image_source/lable.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="78.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image_source/lable.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="78.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image_source/lable.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="78.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image_source/lable.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="78.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image_source/lable.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="100.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image_source/OkButton.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="51.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image_source/coin_task.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="52.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image_source/BREAD.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="52.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image_source/FLOUR.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="52.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image_source/PACKET_MILK.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="53.0" layoutY="431.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image_source/FABRIC.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="53.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image_source/MILK.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="226.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image_source/bear.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="227.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image_source/EGG.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="227.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image_source/ICE_CREAM.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="227.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image_source/SHIRT.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="228.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image_source/FEATHER.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="224.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image_source/time.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="level" alignment="CENTER" layoutX="116.0" layoutY="35.0" prefHeight="51.0" prefWidth="170.0">
+               <font>
+                  <Font name="System Bold Italic" size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="coin" layoutX="93.0" layoutY="117.0" prefHeight="39.0" prefWidth="82.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="bread" layoutX="93.0" layoutY="194.0" prefHeight="39.0" prefWidth="82.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="flour" layoutX="92.0" layoutY="274.0" prefHeight="39.0" prefWidth="82.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="pocketmilk" layoutX="93.0" layoutY="351.0" prefHeight="39.0" prefWidth="82.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="textile" layoutX="93.0" layoutY="428.0" prefHeight="39.0" prefWidth="82.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="buffalo_milk" layoutX="92.0" layoutY="508.0" prefHeight="39.0" prefWidth="82.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="wild_animal" layoutX="264.0" layoutY="120.0" prefHeight="39.0" prefWidth="82.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="egg" layoutX="264.0" layoutY="197.0" prefHeight="39.0" prefWidth="82.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="icecream" layoutX="263.0" layoutY="277.0" prefHeight="39.0" prefWidth="82.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="shirt" layoutX="264.0" layoutY="354.0" prefHeight="39.0" prefWidth="82.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="feather" layoutX="264.0" layoutY="431.0" prefHeight="39.0" prefWidth="82.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="time_passed" layoutX="263.0" layoutY="511.0" prefHeight="39.0" prefWidth="82.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Button layoutX="43.0" layoutY="35.0" mnemonicParsing="false" onAction="#back" prefHeight="50.0" prefWidth="50.0">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:/C:/Users/Moin/Desktop/OOP_Proj_Pase_2_2021/src/image_source/back_logo.png" />
+                     </source>
+                  </ImageInput>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

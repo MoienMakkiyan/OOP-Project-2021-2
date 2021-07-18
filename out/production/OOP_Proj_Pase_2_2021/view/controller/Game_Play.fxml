@@ -23,7 +23,7 @@
                     <effect>
                         <ImageInput>
                             <source>
-                                <Image url="@../../image_source/menu_logo.png" />
+                                <Image url="file:/C:/Users/Moin/Desktop/OOP_Proj_Pase_2_2021/src/image_source/pause_icon.png" />
                             </source>
                         </ImageInput>
                     </effect>
@@ -221,6 +221,18 @@
             <Button fx:id="buy_bakery" layoutX="641.0" layoutY="155.0" mnemonicParsing="false" onAction="#buy_bakery_click" text="buy" />
             <Button fx:id="buy_icecream_shop" layoutX="683.0" layoutY="290.0" mnemonicParsing="false" onAction="#buy_icecream_shop_click" text="buy" />
             <Button fx:id="buy_MilkPacking" layoutX="641.0" layoutY="421.0" mnemonicParsing="false" onAction="#buy_MilkPacking_click" text="buy" />
+            <Button layoutX="650.0" mnemonicParsing="false" onAction="#task_left" prefHeight="49.0" prefWidth="51.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:/C:/Users/Moin/Desktop/OOP_Proj_Pase_2_2021/src/image_source/menu_logo.png" />
+                     </source>
+                  </ImageInput>
+               </effect>
+            </Button>
             </children>
         </AnchorPane>
     </center>

@@ -96,7 +96,6 @@ public class Variable_Reading {
 
 
     public void initializing() {
-        String a = null;
         File directoryPath = new File("Data");
         File filesList[] = directoryPath.listFiles();
         for(File file : filesList) {
@@ -158,7 +157,7 @@ public class Variable_Reading {
                 Well_info = Integer.parseInt(FileReader.nextLine().split("\\s")[2]);
                 starting_coin = Integer.parseInt(FileReader.nextLine().split("\\s")[2]);
             }
-            else if (file.getName().equalsIgnoreCase("Game_Info.txt")){
+            else if (file.getName().equalsIgnoreCase("Time_Info.txt")){
                 egg_time = Integer.parseInt(FileReader.nextLine().split("\\s")[2]);
                 buffalomilk_time = Integer.parseInt(FileReader.nextLine().split("\\s")[2]);
                 turkeyfeather_time = Integer.parseInt(FileReader.nextLine().split("\\s")[2]);
