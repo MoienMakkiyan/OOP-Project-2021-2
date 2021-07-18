@@ -499,6 +499,7 @@ public class Main_Manager {
 
     public boolean Well() {
         if (wateringSystem.isEmpty()&&!filling_well) {
+            wateringSystem.fillWell();
             filling_well = true;
             return true;
         } else return false;
@@ -818,7 +819,7 @@ public class Main_Manager {
     }
 
     public boolean changeTurn(int n) throws IOException {
-        missions.get(current_level-1).setTime_passed_in_this_level(missions.get(current_level-1).getTime_passed_in_this_level()+1);
+        //missions.get(current_level-1).setTime_passed_in_this_level(missions.get(current_level-1).getTime_passed_in_this_level()+1);
         for (int i=0;i<n;i++){
             missions.get(current_level-1).setTime_passed_in_this_level(missions.get(current_level-1).getTime_passed_in_this_level()+1);
 
@@ -1428,6 +1429,18 @@ public class Main_Manager {
         }
     }
 
+    public boolean MapHasGrass(){
+        boolean answer = false;
+        for (int i=0;i<Variable_Reading.getInstance().getMap_size()[0];i++){
+            for (int j=0;j<Variable_Reading.getInstance().getMap_size()[1];j++){
+                if (cell[i][j].hasGrass()){
+                    answer = true;
+                }
+            }
+        }
+        return answer;
+    }
+
     public int SELLING_PROFIT(){
         int sum = 0;
         for (int i=0;i<truck.getInTruck().size();i++)
@@ -1668,9 +1681,9 @@ public class Main_Manager {
         System.out.println("Time passed in this level until now : "+missions.get(current_level-1).getTime_passed_in_this_level());
         System.out.println();
         System.out.println("Grass in Map :");
-        for(int i = 0 ; i < Variable_Reading.getInstance().getMap_size()[0] ; i++){
-            for (int j = 0 ; j < Variable_Reading.getInstance().getMap_size()[1] ; j++){
-                System.out.print(" "+cell[i][j].getHasGrass());
+        for(int i = 0 ; i < Variable_Reading.getInstance().getMap_size()[1] ; i++){
+            for (int j = 0 ; j < Variable_Reading.getInstance().getMap_size()[0] ; j++){
+                System.out.print(" "+cell[j][i].getHasGrass());
             }
             System.out.println();
         }

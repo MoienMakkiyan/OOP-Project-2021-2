@@ -35,7 +35,12 @@ public class Animal {
     }
 
     public void walk(){
-        if (isHungry) directed_walk();
+        if (isHungry) {
+            if (Main_Manager.getInstance().MapHasGrass()){
+                directed_walk();
+            }
+            else simple_walk();
+        }
         else simple_walk();
     }
 
@@ -174,14 +179,24 @@ public class Animal {
         ArrayList<X_Y> x_yArrayList = new ArrayList<>();
         ArrayList<Integer> distance = new ArrayList<>();
         for (int i = 0 ; i < Variable_Reading.getInstance().getMap_size()[0] ; i++){
-            for (int j = 0 ; i < Variable_Reading.getInstance().getMap_size()[1] ; i++){
+            for (int j = 0 ; j < Variable_Reading.getInstance().getMap_size()[1] ; j++){
                 if (Main_Manager.getInstance().getCell()[i][j].hasGrass()){
                     x_yArrayList.add(new X_Y(i+1,j+1));
                     distance.add((int) (Math.pow(x-i-1,2)+Math.pow(y-j-1,2)));
+                    System.out.println((int) (Math.pow(x-i-1,2)+Math.pow(y-j-1,2)));
                 }
             }
         }
         X_Y final_direction = x_yArrayList.get(distance.indexOf(Collections.min(distance)));
+        /*int k = Integer.MAX_VALUE;
+        int i =0 ;
+        for (i =0 ; i < distance.size() ; i++){
+            if (distance.get(i)<k) {
+                k = distance.get(i);
+                break;
+            }
+        }
+        X_Y final_direction = x_yArrayList.get(i);*/
         if (x-final_direction.getX()>0){
             x--;
         }
