@@ -27,6 +27,15 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.getIcons().add(icon);
         primaryStage.show();
+
+        primaryStage.setOnCloseRequest(event -> {
+            event.consume();
+            try {
+                exit(primaryStage);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
     }
 
     public void changeScene(String fxml) throws IOException {
@@ -46,6 +55,19 @@ public class Main extends Application {
         aLert.setHeaderText("You're about to exit the program");
         aLert.setContentText("Are you sure?");
         aLert.getButtonTypes().addAll(ButtonType.YES, ButtonType.NO);
+        if(aLert.showAndWait().get() == ButtonType.YES) {
+            System.exit(1);
+        }
+    }
+
+    public void exit(Stage stage) throws IOException {
+        Alert aLert = new Alert(Alert.AlertType.NONE);
+
+        aLert.setTitle("Exit");
+        aLert.setHeaderText("You're about to exit the program");
+        aLert.setContentText("Are you sure?");
+        aLert.getButtonTypes().addAll(ButtonType.YES, ButtonType.NO);
+
         if(aLert.showAndWait().get() == ButtonType.YES) {
             System.exit(1);
         }
